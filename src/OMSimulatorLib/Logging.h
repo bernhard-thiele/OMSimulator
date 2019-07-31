@@ -46,14 +46,14 @@
   #endif
 #endif
 
-class Log
+__declspec(dllexport) class Log
 {
 public:
-  static void Info(const std::string& msg);
-  static oms_status_enu_t Warning(const std::string& msg);
-  static oms_status_enu_t Error(const std::string& msg, const std::string& function);
-  static void Debug(const std::string& msg);
-  static void Trace(const std::string& function, const std::string& file, const long line);
+  __declspec(dllexport) static void Info(const std::string& msg);
+  __declspec(dllexport) static oms_status_enu_t Warning(const std::string& msg);
+  __declspec(dllexport) static oms_status_enu_t Error(const std::string& msg, const std::string& function);
+  __declspec(dllexport) static void Debug(const std::string& msg);
+  __declspec(dllexport) static void Trace(const std::string& function, const std::string& file, const long line);
 
   static void ProgressBar(double start, double stop, double value);
   static void TerminateBar();
